@@ -1,5 +1,5 @@
 {
-    "name" : "agazzi/RestClientAuthenticator",
+    "name" : "agazzi/rest-client-authenticator",
     "description" : "API restfull json authenticator client",
     "type" : "symfony-bundle",
     "authors" : [{
