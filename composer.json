@@ -1,0 +1,30 @@
+{
+    "name" : "agazzi/RestClientAuthenticator",
+    "description" : "API restfull json authenticator client",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "agazzi",
+        "email" : "william.rudent@gmail.com"
+    }],
+    "keywords" : [
+        "API Rest client authenticator"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+    },
+    "autoload" : {
+        "psr-0" : {
+            "Agazzi\\RestClientAuthenticator" : ""
+        }
+    },
+    "target-dir" : "agazzi/Bundle/RestClientAuthenticator",
+    "repositories" : [{
+    }],
+    "extra" : {
+    "branch-alias" : {
+            "dev-master" : "1.0"
+        }
+    }
+}
