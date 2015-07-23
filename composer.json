@@ -1,30 +1,21 @@
 {
     "name" : "agazzi/rest-client-authenticator",
     "description" : "API restfull json authenticator client",
-    "type" : "symfony-bundle",
-    "authors" : [{
-        "name" : "agazzi",
-        "email" : "william.rudent@gmail.com"
-    }],
-    "keywords" : [
-        "API Rest client authenticator"
-    ],
-    "license" : [
-        "MIT"
-    ],
-    "require" : {
-    },
-    "autoload" : {
-        "psr-0" : {
-            "Agazzi\\RestClientAuthenticator" : ""
+    "keywords": ["package", "composer"],
+    "homepage": "http://vigitas.com/",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "William Rudent",
+            "email": "william.rudent@gmail.com",
+            "homepage": "http://vigitas.com"
         }
+    ],
+    "support": {
+          "email": "contact@packagist.org"
     },
-    "target-dir" : "agazzi/Bundle/RestClientAuthenticator",
-    "repositories" : [{
-    }],
-    "extra" : {
-    "branch-alias" : {
-            "dev-master" : "1.0"
-        }
-    }
+    "autoload": {
+        "psr-0": { "RestClientAuthenticator": "src/" }
+    },
 }
