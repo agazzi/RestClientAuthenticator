@@ -14,8 +14,5 @@
     ],
     "support": {
           "email": "contact@packagist.org"
-    },
-    "autoload": {
-        "psr-0": { "RestClientAuthenticator": "src/" }
     }
 }
