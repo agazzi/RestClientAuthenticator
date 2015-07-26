@@ -28,4 +28,26 @@ class UserService extends Controller
 
         return $user;
     }
+
+    public function loadUser()
+    {
+        $apikey = $this->getParameter('api_key');
+
+        $token = $this->getRequest()->getSession()->get('user')->getUsername();
+
+        $curl = $this->get('service.client.curl');
+
+        $curl->get('http://api.nativgaming.com/user/me', [
+            'apikey'    => $apikey,
+            'token'     => $token
+        ]);
+
+        $query = $curl->response;
+
+        $userdata = (array) json_decode($query);
+
+        $user = $this->setUser($userdata);
+
+        return $user;
+    }
 }

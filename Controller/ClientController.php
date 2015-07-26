@@ -21,18 +21,13 @@ class ClientController extends Controller
 
         $data = $crypter->digest($token, $uid, $key, $roles);
 
-        $token = new UsernamePasswordToken($data[0], $token, 'main', $data[2]);
-
         $context = $this->get('security.context');
-
-        $context->setToken($token);
 
         $route = 'http://' . $this->getParameter('api_domain') . $this->getParameter('api_redirect_uri');
 
         $curl = $this->get('service.client.curl');
 
         $curl->get('http://api.nativgaming.com/user/me', [
-            'userkey'   => $data[1],
             'apikey'    => $apikey,
             'token'     => $data[0]
         ]);
@@ -42,10 +37,18 @@ class ClientController extends Controller
         $userdata = (array) json_decode($query);
 
         $user = $this->get('service.client.user');
+
         $user = $user->setUser($userdata);
 
         $session = $this->container->get('session');
+
         $session->set('user', $user);
+
+        $token = new UsernamePasswordToken($data[0], $token, 'main', $data[2]);
+
+        $context->setToken($token);
+
+        $user = $this->get('service.client.user')->loadUser();
 
         return $this->redirect($route);
     }
