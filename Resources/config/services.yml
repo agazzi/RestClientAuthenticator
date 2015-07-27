@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 parameters:
     service.client.curl.class: Agazzi\RestClientAuthenticatorBundle\Services\CurlService
     service.client.crypter.class: Agazzi\RestClientAuthenticatorBundle\Services\CrypterService
@@ -22,3 +23,24 @@ services:
         class: %service.client.api.class%
         calls:
             - [setContainer, [@service_container]]
+||||||| merged common ancestors
+=======
+parameters:
+    service.client.curl.class: Agazzi\RestClientAuthenticatorBundle\Services\CurlService
+    service.client.crypter.class: Agazzi\RestClientAuthenticatorBundle\Services\CrypterService
+    service.client.user.class: Agazzi\RestClientAuthenticatorBundle\Services\UserService
+
+services:
+    service.client.curl:
+        class: %service.client.curl.class%
+        calls:
+            - [setContainer, [@service_container]]
+    service.client.crypter:
+        class: %service.client.crypter.class%
+        calls:
+            - [setContainer, [@service_container]]
+    service.client.user:
+        class: %service.client.user.class%
+        calls:
+            - [setContainer, [@service_container]]
+>>>>>>> bbd891b16eb177f10afa76c170f3afc7573b2d9e
