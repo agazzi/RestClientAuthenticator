@@ -1,0 +1,21 @@
+{
+    "name" : "agazzi/rest-client-authenticator",
+    "description" : "API restfull json authenticator client",
+    "keywords": ["package", "composer"],
+    "homepage": "http://vigitas.com/",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "William Rudent",
+            "email": "william.rudent@gmail.com",
+            "homepage": "http://vigitas.com"
+        }
+    ],
+    "support": {
+          "email": "contact@packagist.org"
+    },
+    "autoload": {
+        "psr-4": { "Agazzi\\RestClientAuthenticatorBundle\\": "" }
+    }
+}
